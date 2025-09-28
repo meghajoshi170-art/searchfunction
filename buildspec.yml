@@ -5,10 +5,10 @@ phases:
       python: 3.10
   build:
     commands:
-      - aws cloudformation package --template-file search-gateway.yaml --s3-bucket lambdaoutputbucket-556174328764 --output-template-file lambdaoutput.yaml
+      - aws cloudformation package --template-file search-function.yaml --s3-bucket lambdaoutputbucket-556174328764 --output-template-file lambdaoutput.yaml
 
 artifacts:
   type: zip
   files:
-    - search-gateway.yaml
+    - search-function.yaml
     - lambdaoutput.yaml
