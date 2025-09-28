@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+  build:
+    commands:
+      - aws cloudformation package --template-file search-gateway.yaml --s3-bucket lambdaoutputbucket-556174328764 --output-template-file lambdaoutput.yaml
+
+artifacts:
+  type: zip
+  files:
+    - search-gateway.yaml
+    - lambdaoutput.yaml
