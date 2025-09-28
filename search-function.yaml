@@ -7,7 +7,7 @@ Resources:
     Properties:
       Handler: sample.lambda_handler
       Runtime: python3.9
-      CodeUri: .
+      CodeUri: s3://lambdaoutputbucket-556174328764/searchfunction/searchfunction.zip
       Description: ''
       MemorySize: 128
       Timeout: 300
